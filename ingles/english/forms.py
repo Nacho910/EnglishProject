@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django .forms import ModelForm, TextInput, NumberInput, Select, DateInput, EmailInput, PasswordInput
 from django.contrib.auth.models import User
-from .models import Profesor
+from .models import Profesor, Comentario
 
 
 class ProfesorForm(forms.ModelForm):
@@ -62,3 +62,19 @@ class UserRegistrationForm(UserCreationForm):
         model = User
         fields = ('username', 'email', 'password1', 'password2')
         help_text = {k:"" for k in fields}
+
+
+class ComentarioForm(forms.ModelForm):
+    class Meta:
+        model = Comentario
+        fields = ('nombre', 'comentario')
+        widgets = {
+            'comentario': forms.TextInput(attrs={
+                'class': 'control',
+                'placeholder': 'Comentario',
+                'style': 'max-width: 300px;',
+                'label': 'Comentario',
+                'required': 'True',
+                'max_length': '500',
+                })
+        }

@@ -11,10 +11,12 @@
 
               {% csrf_token %}
               {{ form | crispy }}
-              <button type="submit">Login</button>
+              <br>
+              <button type="submit" class="button is-success">Ingresar</button>
 
             </form>
-            <p class="text-center">Don't have an account? <a href="/valido">Create an account</a>.</p>
+           
+            <p class="text-center">¿No tienes una cuenta? <a href="/valido">Create una cuenta</a>.</p>
     </div>
 </div>
 {% endblock content%}
