@@ -26,3 +26,15 @@ class Comentario(models.Model):
 
     def __str__(self):
         return self.comentario
+
+
+class Curso(models.Model):
+    nombre = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=500)
+    fecha_inicio = models.DateField(default=datetime.date.today)
+    duracion = models.IntegerField()
+    precio = models.FloatField()
+    profesor = models.ManyToManyField(Profesor, related_name='cursos')
+
+    def __str__(self):
+        return self.nombre

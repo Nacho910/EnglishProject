@@ -22,6 +22,9 @@ def formulario(request):
 def registro(request):
     return render(request, 'ruta/registro.html')
 
+def contenido(request):
+    return render(request, 'ruta/contenido.html')
+
 def comentario(request):
     form = ComentarioForm(request.POST or None)
     form_class = ComentarioForm

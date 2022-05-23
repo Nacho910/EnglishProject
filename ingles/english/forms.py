@@ -2,7 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django .forms import ModelForm, TextInput, NumberInput, Select, DateInput, EmailInput, PasswordInput
 from django.contrib.auth.models import User
-from .models import Profesor, Comentario
+from .models import Profesor, Comentario, Curso
 
 
 class ProfesorForm(forms.ModelForm):
@@ -77,4 +77,54 @@ class ComentarioForm(forms.ModelForm):
                 'required': 'True',
                 'max_length': '500',
                 })
+        }
+
+class CursoForm(forms.ModelForm):
+    class Meta:
+        model = Curso
+        fields = ('nombre', 'descripcion', 'fecha_inicio', 'duracion', 'precio', 'profesor')
+        widgets = {
+            'nombre': forms.TextInput(attrs={
+                'class': 'control',
+                'placeholder': 'Nombre Curso',
+                'style': 'max-width: 300px;',
+                'label': 'nombre',
+                'required': 'True',
+                'max_length': '50',
+                }),
+            'descripcion': forms.TextInput(attrs={
+                'class': 'control',
+                'placeholder': 'Descripción',
+                'style': 'max-width: 300px;',
+                'label': 'Descripción',
+                'required': 'True',
+                'max_length': '500',
+                }),
+            'fecha_inicio': forms.DateInput(attrs={
+                'class': 'control',
+                'placeholder': 'Fecha de Inicio',
+                'style': 'max-width: 300px;',
+                'label': 'Fecha de Inicio',
+                'required': 'True',
+                'max_length': '50'
+                }),
+            'duracion': forms.NumberInput(attrs={
+                'class': 'control',
+                'placeholder': 'Duración',
+                'style': 'max-width: 300px;',
+                'label': 'Duración',
+                'required': 'True',
+                'max_length': '50'
+                }),
+            'precio': forms.NumberInput(attrs={
+                'class': 'control',
+                'placeholder': 'Precio',
+                'style': 'max-width: 300px;',
+                'label': 'Precio',
+                'required': 'True',
+                'max_length': '50'
+                }),
+            'profesor': forms.Select(attrs={
+                'class': 'control'
+                }),
         }
