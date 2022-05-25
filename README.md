@@ -2,6 +2,7 @@
 
 Hola Rodrigo!!
 
+<<<<<<< HEAD
 Subo el proyecto por aquí porque esta muy pesado hacerlo por el nodo. No voy a subir el sprint todavía, para ver que puedo mejorar hasta el martes. El index esta listo, con los enlaces redirigiendo a las otras paginas. Me falta hacer mas bonito la autenticación y el comentario, pero estan funcionado ambos.
 
 Saludos
@@ -43,3 +44,10 @@ Tambien en la seccion comentarios deje para que cada persona (sin estar ingresad
 La información recogida en los formularios es de vital importancia para conocer quien fue la persona que creo su cuenta, pidiendole sus nombres, apellidos, fecha de nacimiento entre otros. Esto es para poder llevar una contabilidad de la cantidad de personas que crean cuentas en nuestro servidor. Esta información se puede ver solamente atraves de django, no quise hacerlo que se mostrara en la pagina, ya que la pagina no busca eso, sino que busca que el usuario pueda utilizarla para aprender ingles.
 
 
+=======
+Subo el proyecto por aquí porque esta muy pesado hacerlo por el nodo.
+No voy a subir el sprint todavía, para ver que puedo mejorar hasta el martes. 
+El index esta listo, con los enlaces redirigiendo a las otras paginas. Me falta hacer mas bonito la autenticación y el comentario, pero estan funcionado ambos.
+
+Saludos
+>>>>>>> 78f33dcda62d4c67656ab3267e14a4423ffd8aaa
