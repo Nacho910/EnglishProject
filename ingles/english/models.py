@@ -1,3 +1,4 @@
+from tkinter import Widget
 from django.db import models
 import datetime
 
@@ -21,7 +22,7 @@ class Profesor(models.Model):
 
 class Comentario(models.Model):
     nombre = models.CharField(max_length=50)
-    comentario = models.CharField(max_length=500)
+    comentario = models.TextField(max_length=500)
     fecha_publicacion = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

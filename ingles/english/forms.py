@@ -69,9 +69,16 @@ class ComentarioForm(forms.ModelForm):
         model = Comentario
         fields = ('nombre', 'comentario')
         widgets = {
-            'comentario': forms.TextInput(attrs={
+            'nombre': forms.TextInput(attrs={
                 'class': 'control',
-                'placeholder': 'Comentario',
+                'style': 'max-width: 300px;',
+                'label': 'nombre',
+                'required': 'True',
+                'max_length': '50',
+                }),
+            'comentario': forms.TextInput(attrs={
+                'widget': 'textarea',
+                'class': 'control',
                 'style': 'max-width: 300px;',
                 'label': 'Comentario',
                 'required': 'True',
